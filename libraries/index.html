@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選單範例</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* 選單容器 */
+      .menu {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      /* 選單項目 */
+      .menu li {
+        margin: 0;
+        padding: 10px 15px;
+        position: relative;
+      }
+
+      /* 選單連結樣式 */
+      .menu li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      /* 滑鼠懸停效果 */
+      .menu li a:hover {
+        color: #007bff;
+      }
+
+      /* 子選單樣式 */
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .submenu li {
+        padding: 10px 15px;
+      }
+
+      .submenu li a {
+        color: #333;
+        font-weight: normal;
+      }
+
+      .submenu li a:hover {
+        color: #007bff;
+      }
+
+      /* 顯示子選單 */
+      .menu li:hover .submenu {
+        display: block;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <!-- 選單 -->
+    <ul class="menu">
+      <li><a href="#home">首頁</a></li>
+      <li><a href="#about">自我介紹</a></li>
+      <li>
+        <a href="#portfolio">作品集</a>
+        <!-- 子選單 -->
+        <ul class="submenu">
+          <li><a href="https://www.et.tku.edu.tw//Front/AboutET/IntroductionVideo/Page.aspx?id=WgVW%2BUDsSE4=" target="_blank">1. 週</a></li>
+          <li><a href="#week2">2. 週</a></li>
+          <li><a href="#week3">3. 週</a></li>
+          <li><a href="#week4">4. 週</a></li>
+          <li><a href="#week5">5. 週</a></li>
+        </ul>
+      </li>
+      <li><a href="#quiz">測驗卷</a></li>
+      <li><a href="#videos">教學影片</a></li>
+    </ul>
+    <script src="sketch.js"></script>
+  </body>
+</html>
